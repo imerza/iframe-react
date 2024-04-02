@@ -121,9 +121,7 @@ function App() {
                   borderRadius: '20px',
                 }}
                 onClick={() => {
-                  window?.e3ds_controller.sendToUnreal({
-                  MoveToLapLongAlt("38.9172,-77.0369,0.0")
-                });
+                  hideSettings('e3ds_control_toggle_Obj');
                 }}
               >
                 <span style={{ fontSize: '17px' }}><FiSettings/></span>{' '}
