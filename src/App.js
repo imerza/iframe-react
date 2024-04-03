@@ -149,7 +149,7 @@ function App() {
             <iframe
               style={{ border: 'none' }}
               ref={iframeElem}
-              title='demo'
+              title='CBRE MC Test'
               allow='camera;microphone'
               id='iframe_1'
               src='https://connector.eagle3dstreaming.com/v5/imerza/CBRE_MarketCanvas_PS/CBRE_MarketCanvas?appVersion=2'
