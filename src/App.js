@@ -11,13 +11,13 @@ function App() {
       iframeElem.current.contentWindow.postMessage(JSON.stringify(obj), origin);
     }
 
-    window.addEventListener('message', function(event) {
-        // Check if the origin of the message is trusted
-        if (event.origin !== 'https://localhost:3000') {
-            console.log(`"Message received: " + ${JSON.stringify(obj)} `, event.origin);
-            return;
-        }
-    })
+    // window.addEventListener('message', function(event) {
+    //     // Check if the origin of the message is trusted
+    //     if (event.origin !== 'https://localhost:3000') {
+    //         console.log(`"Message received: " + ${JSON.stringify(obj)} `, event.origin);
+    //         return;
+    //     }
+    // })
   };
 
   function moveToBuilding(lat, long, alt) {
@@ -60,7 +60,7 @@ function App() {
         <div
             style={{
                 position: 'absolute',
-                top: 0,
+                bottom: 0,
                 left: 0,
                 zIndex: 20,
                 display: 'flex',
