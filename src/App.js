@@ -54,13 +54,12 @@ function App() {
     sendToMainPage(obj);
   }
 
-    function moveToLatLonAlt(val) {
-        let descriptor = {
-            Teleport: val,
-        };
+    function moveToBuilding(lat, long, alt) {
         let obj = {
-            cmd: 'MoveToLatLonAlt',
-            value: descriptor,
+            cmd: 'MoveToBuilding',
+            lat: lat,
+            long: long,
+            alt: alt,
         };
         console.log(JSON.stringify(obj))
         sendToMainPage(obj);
@@ -168,7 +167,7 @@ function App() {
                       borderRadius: '20px',
                   }}
                   onClick={() => {
-                      moveToLatLonAlt(38.9172,-77.0369,0.0);
+                      moveToBuilding(38.9172,-77.0369,0.0);
                   }}
               >
                   <span style={{ fontSize: '17px' }}></span>{' '}
