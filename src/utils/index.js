@@ -28,7 +28,7 @@ export const commands = [
 
   {
     name: 'Open Call',
-    value: '4',
+    value: '45',
     icon: <FiPhoneCall />,
   },
   // {
