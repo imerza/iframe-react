@@ -21,14 +21,20 @@ function App() {
   };
 
   function moveToBuilding(lat, long, alt) {
-    let obj = {
-        cmd: 'MoveToBuilding',
-        lat: lat.toString(),
-        long: long.toString(),
-        alt: alt.toString(),
-    };
-    console.log(JSON.stringify(obj))
-    sendToMainPage(obj);
+      let obj = {
+          cmd: 'MoveToBuilding',
+          lat: lat.toString(),
+          long: long.toString(),
+          alt: alt.toString(),
+      };
+      // console.log(JSON.stringify(obj))
+      // sendToMainPage(obj);
+
+      let origin = '*';
+
+      if (null !== iframeElem.current) {
+          iframeElem.current.contentWindow.postMessage(JSON.stringify(obj), origin);
+      }
   }
 
   function showMap(val) {
