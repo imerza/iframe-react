@@ -27,7 +27,7 @@ function App() {
           long: long.toString(),
           alt: alt.toString(),
       };
-      // console.log(JSON.stringify(obj))
+      console.log(JSON.stringify(obj))
       // sendToMainPage(obj);
 
       let origin = '*';
@@ -36,6 +36,17 @@ function App() {
           iframeElem.current.contentWindow.postMessage(JSON.stringify(obj), origin);
       }
   }
+
+    function switchTo(val) {
+        let obj = {
+            cmd: 'sendToUe4',
+            value: {
+                Teleport: val,
+            },
+        };
+        console.log(JSON.stringify(obj))
+        sendToMainPage(obj);
+    }
 
   function showMap(val) {
     let descriptor = {
@@ -144,7 +155,8 @@ function App() {
                     borderRadius: '20px',
                 }}
                 onClick={() => {
-                    toggleMap();
+                    // toggleMap();
+                    switchTo('6')
                 }}
             >
                 <span style={{ fontSize: '17px' }}></span>{' '}
