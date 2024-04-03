@@ -20,7 +20,7 @@ function App() {
     // })
   };
 */
-  const sendToMainPage(obj) {
+  function sendToMainPage(obj) {
     let origin = "*"
     let myIframe = document.getElementById("iframe_1");
     myIframe.contentWindow.postMessage(JSON.stringify(obj), origin);
