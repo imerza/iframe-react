@@ -22,10 +22,13 @@ function App() {
 
   function moveToBuilding(lat, long, alt) {
       let obj = {
-          cmd: 'MoveToBuilding',
-          lat: lat.toString(),
-          long: long.toString(),
-          alt: alt.toString(),
+          cmd: 'sendToUe4',
+          value: {
+              cmd: 'moveToBuilding',
+              lat: lat.toString(),
+              long: long.toString(),
+              alt: alt.toString()
+          }
       };
       console.log(JSON.stringify(obj))
       // sendToMainPage(obj);
