@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   const iframeElem = useRef();
   const [map, setMap] = useState(false);
-
+/*
   const sendToMainPage = (obj) => {
     let origin = '*';
     console.log(iframeElem);
@@ -19,7 +19,13 @@ function App() {
     //     }
     // })
   };
-
+*/
+  const sendToMainPage(obj) {
+    let origin = "*"
+    let myIframe = document.getElementById("iframe_1");
+    myIframe.contentWindow.postMessage(JSON.stringify(obj), origin);
+}
+  
   function moveToBuilding(lat, long, alt) {
       let obj = {
           cmd: 'sendToUe4',
@@ -31,13 +37,13 @@ function App() {
           }
       };
       console.log(JSON.stringify(obj))
-      // sendToMainPage(obj);
-
+      sendToMainPage(obj);
+/*
       let origin = '*';
 
       if (null !== iframeElem.current) {
           iframeElem.current.contentWindow.postMessage(JSON.stringify(obj), origin);
-      }
+      }*/
   }
 
     function switchTo(val) {
