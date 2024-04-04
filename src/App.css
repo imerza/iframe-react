@@ -1,3 +1,37 @@
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.cmd-btn-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+.cmd-btn {
+    outline: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 8px 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(221 222 224);
+    color: black;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
 .cmd-btn:hover {
     background-color: rgb(203, 203, 203) !important;
 }
