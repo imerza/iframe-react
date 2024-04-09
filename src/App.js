@@ -21,6 +21,9 @@ function App() {
     const tempFloor = 4;
     const tempTotalFloorsAvail = 5;
 
+    /* View List: market_metro_overview, market_washington_overview, property_overview_map, property_property_availabilities */
+    const tempConceptView = 'market_metro_overview';
+
     /* Transmits Data Packet to iFrame */
     function sendToMainPage(obj) {
         let origin = '*';
@@ -52,6 +55,15 @@ function App() {
             value: payload
         };
         sendToMainPage(ueObj);
+    }
+
+    /* Shows Concept View */
+    function showConceptView(view) {
+        let payload = {
+            uecmd: 'ShowConceptView',
+            view: view
+        };
+        uePacket(payload);
     }
 
     /* Shows Market Geometry */
@@ -292,6 +304,14 @@ function App() {
                     }}
                 >
                     <span>Highlight Availability</span>
+                </button>
+                <button
+                    className='cmd-btn'
+                    onClick={() => {
+                        showConceptView(tempConceptView);
+                    }}
+                >
+                    <span>Show Concept View</span>
                 </button>
             </div>
             <iframe
