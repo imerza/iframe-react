@@ -320,7 +320,7 @@ function App() {
                 title='CBRE MC Test'
                 allow='camera;microphone'
                 id='iframe_1'
-                src='https://connector.eagle3dstreaming.com/v5/imerza/CBRE_MarketCanvas_PS/CBRE_MarketCanvas?appVersion=4'
+                src='https://connector.eagle3dstreaming.com/v5/imerza/CBRE_MarketCanvas_PS/CBRE_MarketCanvas?appVersion=5'
                 // src='https://connector.eagle3dstreaming.com/v5/demo/E3DSFeaturesTemplate/E3DS-Iframe-Demo'
                 width='100%'
                 height='100%'
