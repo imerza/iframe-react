@@ -311,7 +311,39 @@ function App() {
                         showConceptView(tempConceptView);
                     }}
                 >
-                    <span>Show Concept View</span>
+                    <span>Show Concept View Temp</span>
+                </button>
+                <button
+                    className='cmd-btn'
+                    onClick={() => {
+                        showConceptView(market_metro_overview);
+                    }}
+                >
+                    <span>Show View - Metro Overview</span>
+                </button>
+                <button
+                    className='cmd-btn'
+                    onClick={() => {
+                        showConceptView(market_washington_overview);
+                    }}
+                >
+                    <span>Show View - Washinton Overview</span>
+                </button>
+                <button
+                    className='cmd-btn'
+                    onClick={() => {
+                        showConceptView(property_overview_map);
+                    }}
+                >
+                    <span>Show View - Property Overview Map</span>
+                </button>
+                <button
+                    className='cmd-btn'
+                    onClick={() => {
+                        showConceptView(property_property_availabilities);
+                    }}
+                >
+                    <span>Show View - Property Availabilities</span>
                 </button>
             </div>
             <iframe
