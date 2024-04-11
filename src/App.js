@@ -23,6 +23,10 @@ function App() {
 
     /* View List: market_metro_overview, market_washington_overview, property_overview_map, property_property_availabilities */
     const tempConceptView = 'market_metro_overview';
+    const tempConceptView1 = 'market_metro_overview';
+    const tempConceptView2 = 'market_washington_overview';
+    const tempConceptView3 = 'property_overview_map';
+    const tempConceptView4 = 'property_property_availabilities';
 
     /* Transmits Data Packet to iFrame */
     function sendToMainPage(obj) {
@@ -316,7 +320,7 @@ function App() {
                 <button
                     className='cmd-btn'
                     onClick={() => {
-                        showConceptView(market_metro_overview);
+                        showConceptView(tempConceptView1);
                     }}
                 >
                     <span>Show View - Metro Overview</span>
@@ -324,7 +328,7 @@ function App() {
                 <button
                     className='cmd-btn'
                     onClick={() => {
-                        showConceptView(market_washington_overview);
+                        showConceptView(tempConceptView2);
                     }}
                 >
                     <span>Show View - Washinton Overview</span>
@@ -332,7 +336,7 @@ function App() {
                 <button
                     className='cmd-btn'
                     onClick={() => {
-                        showConceptView(property_overview_map);
+                        showConceptView(tempConceptView3);
                     }}
                 >
                     <span>Show View - Property Overview Map</span>
@@ -340,7 +344,7 @@ function App() {
                 <button
                     className='cmd-btn'
                     onClick={() => {
-                        showConceptView(property_property_availabilities);
+                        showConceptView(tempConceptView4);
                     }}
                 >
                     <span>Show View - Property Availabilities</span>
