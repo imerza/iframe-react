@@ -235,6 +235,19 @@ function App() {
         uePacket(payload);
     }
 
+    /* Indicates Stream Active */
+    function streamActive() {
+        console.log('Stream Active')
+        /* Insert Koalition Function */
+    }
+
+    /* Listens for Stream Active */
+    window.addEventListener("message", (message) => {
+        if (message.data.type === 'stage5_playBtnPressed') {
+            streamActive()
+        }
+    });
+
     return (
         <div className={'wrapper'}>
             <div className={'cmd-btn-container'}>
